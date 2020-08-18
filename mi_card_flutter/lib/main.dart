@@ -2,8 +2,100 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    Chapter6Challenge(),
+    MiCard(),
   );
+}
+
+//the project for this chapter. A business card in an app
+
+class MiCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      //you always need to specify a home widget
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          //scaffold needs a body attribute
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage("images/LevLink.jpeg"),
+              ),
+              Text(
+                "Lev Cesar Guzman Aparicio",
+                style: TextStyle(
+                  fontFamily: 'Satisfy',
+                  fontSize: 25.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "FULL STACK DEVELOPER",
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 15.0,
+                    color: Colors.white60,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.5),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 50.0,
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                        width:
+                            10.0), //sizedbox used to separate the icon from the text
+                    Text(
+                      "+52 (595) 1120 634",
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: "Source Sans Pro",
+                          fontSize: 19.0),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                  color: Colors.white,
+                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 50.0,
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.email,
+                        color: Colors.teal,
+                      ),
+                      SizedBox(width: 10.0),
+                      Text(
+                        "lguzm038@uottawa.ca",
+                        style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: "Source Sans Pro",
+                            fontSize: 19.0),
+                      )
+                    ],
+                  )),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 //we will now use a STATELESS flutter widget so we can use hot reload
@@ -66,7 +158,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//Code Challenge widget
+//Code Challenge widget. Completed
 class Chapter6Challenge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
