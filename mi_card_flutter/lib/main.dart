@@ -18,6 +18,7 @@ class MiCard extends StatelessWidget {
         body: SafeArea(
           //scaffold needs a body attribute
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
@@ -41,55 +42,47 @@ class MiCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2.5),
               ),
-              Container(
+              SizedBox(
+                  height: 20.0,
+                  width: 300.0,
+                  child: Divider(color: Colors.teal.shade100)),
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
+                // padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 50.0,
                 ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                        width:
-                            10.0), //sizedbox used to separate the icon from the text
-                    Text(
-                      "+52 (595) 1120 634",
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.teal),
+                  title: Text("+52 (595) 1120 634",
                       style: TextStyle(
+                          fontSize: 20.0,
                           color: Colors.teal.shade900,
-                          fontFamily: "Source Sans Pro",
-                          fontSize: 19.0),
-                    ),
-                  ],
+                          fontFamily: "Source Sans Pro")),
                 ),
               ),
-              Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(10.0),
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10.0,
-                    horizontal: 50.0,
+              Card(
+                color: Colors.white,
+                //padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 50.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
                   ),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(width: 10.0),
-                      Text(
-                        "lguzm038@uottawa.ca",
-                        style: TextStyle(
-                            color: Colors.teal.shade900,
-                            fontFamily: "Source Sans Pro",
-                            fontSize: 19.0),
-                      )
-                    ],
-                  )),
+                  title: Text(
+                    "lguzm038@uottawa.ca",
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.teal.shade900,
+                        fontFamily: "Source Sans Pro"),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -199,3 +192,20 @@ class Chapter6Challenge extends StatelessWidget {
     );
   }
 }
+
+//Row(
+//children: <Widget>[
+//Icon(
+//Icons.email,
+//color: Colors.teal,
+//),
+//SizedBox(width: 10.0),
+//Text(
+//"lguzm038@uottawa.ca",
+//style: TextStyle(
+//color: Colors.teal.shade900,
+//fontFamily: "Source Sans Pro",
+//fontSize: 19.0),
+//)
+//],
+//),
