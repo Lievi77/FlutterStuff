@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="20e75cb5-b915-4929-bbd6-a36b5a21bf00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_XL_API_27" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="45344a5939443098" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -31,7 +37,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dicee-flutter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -91,22 +97,22 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="688" y="256" width="532" height="596" key="FileChooserDialogImpl/0.34.1920.1046@0.34.1920.1046" timestamp="1597882639467" />
-    <state width="1862" height="263" key="GridCell.Tab.0.bottom" timestamp="1597882013057">
+    <state width="1862" height="263" key="GridCell.Tab.0.bottom" timestamp="1598486891616">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1862" height="263" key="GridCell.Tab.0.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1597882013057" />
-    <state width="1862" height="263" key="GridCell.Tab.0.center" timestamp="1597882013054">
+    <state width="1862" height="263" key="GridCell.Tab.0.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1598486891616" />
+    <state width="1862" height="263" key="GridCell.Tab.0.center" timestamp="1598486891615">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1862" height="263" key="GridCell.Tab.0.center/0.34.1920.1046@0.34.1920.1046" timestamp="1597882013054" />
-    <state width="1862" height="263" key="GridCell.Tab.0.left" timestamp="1597882013053">
+    <state width="1862" height="263" key="GridCell.Tab.0.center/0.34.1920.1046@0.34.1920.1046" timestamp="1598486891615" />
+    <state width="1862" height="263" key="GridCell.Tab.0.left" timestamp="1598486891613">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1862" height="263" key="GridCell.Tab.0.left/0.34.1920.1046@0.34.1920.1046" timestamp="1597882013053" />
-    <state width="1862" height="263" key="GridCell.Tab.0.right" timestamp="1597882013056">
+    <state width="1862" height="263" key="GridCell.Tab.0.left/0.34.1920.1046@0.34.1920.1046" timestamp="1598486891613" />
+    <state width="1862" height="263" key="GridCell.Tab.0.right" timestamp="1598486891616">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1862" height="263" key="GridCell.Tab.0.right/0.34.1920.1046@0.34.1920.1046" timestamp="1597882013056" />
+    <state width="1862" height="263" key="GridCell.Tab.0.right/0.34.1920.1046@0.34.1920.1046" timestamp="1598486891616" />
     <state x="324" y="104" key="SettingsEditor" timestamp="1597767357929">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
