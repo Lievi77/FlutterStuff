@@ -1,0 +1,4 @@
+#Sun Aug 30 16:49:44 EDT 2020
+base.0=/home/lev/IDEEN_MX/FlutterStuff/dicee-flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
