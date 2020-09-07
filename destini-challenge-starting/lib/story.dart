@@ -9,9 +9,21 @@ class Story {
   String _choice1;
   String _choice2;
 
-  Story({String title, String choice1Text, String choice2Text}) {
-    _storyTitle = title;
-    _choice1 = choice1Text;
-    _choice2 = choice2Text;
+  Story({String storyTitle, String choice1, String choice2}) {
+    _storyTitle = storyTitle;
+    _choice1 = choice1;
+    _choice2 = choice2;
+  }
+
+  String getTitle() {
+    return _storyTitle;
+  }
+
+  String getChoice1() {
+    return _choice1;
+  }
+
+  String getChoice2() {
+    return _choice2;
   }
 }
