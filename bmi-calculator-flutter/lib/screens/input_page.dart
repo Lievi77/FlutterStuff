@@ -1,20 +1,17 @@
 //file to harbor the input screen
 
-import 'package:bmi_calculator/results_page.dart';
+import 'package:bmi_calculator/screens/results_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'Reusable_Card.dart';
-import 'Icon_Content.dart';
-import 'Constants.dart';
+import '../components/Reusable_Card.dart';
+import '../components/Icon_Content.dart';
+import '../Constants.dart';
+import '../components/bottom_button.dart';
+import '../components/Round_Icon_Button.dart';
+import 'package:bmi_calculator/calculator_brain.dart';
 
 //GOOD PRACTICE TO SET CONSTANTS AT THE BEGINNING OR IN A SEPERATE FILE
-//const bottomContainerHeight = 80.0;
-//const reusableCardsColor = 0xFF1D1E33;
-//const bottomContainerColor = 0xFFEB1555;
-//const fontColorBoxes = 0xFF8D8E98;
-//const activeCardColor = Color(0xFF1D1E33);
-//const inactiveCardColor = Color(0xFF111328);
 
 //ENUM DECLARATION EXAMPLE
 enum Genders { Male, Female }
@@ -25,9 +22,6 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-//  Color maleCardColor = inactiveCardColor;
-//  Color femaleCardColor = inactiveCardColor;
-
   Genders selectedGender;
 
   int height = 180;
@@ -35,36 +29,6 @@ class _InputPageState extends State<InputPage> {
   int weight = 60;
 
   int age = 30;
-
-//  void updateCardColor(Genders gender) {
-//    //if 1 = male,2 = female
-//
-//    //We can use the enum as a Data Type
-//    //access elements via dot operator
-//
-//    //TERTIARY OPERATOR ()?:
-//
-//
-//
-//    if (gender == Genders.Male) {
-//
-//      maleCardColor == inactiveCardColor ? maleCardColor = activeCardColor  :  ?
-//
-//      if (maleCardColor == inactiveCardColor) {
-//        maleCardColor = activeCardColor;
-//        femaleCardColor = inactiveCardColor;
-//      } else {
-//        maleCardColor = inactiveCardColor;
-//      }
-//    } else {
-//      if (femaleCardColor == inactiveCardColor) {
-//        femaleCardColor = activeCardColor;
-//        maleCardColor = inactiveCardColor;
-//      } else {
-//        femaleCardColor = inactiveCardColor;
-//      }
-//    }
-//  }
 
   @override
   Widget build(BuildContext context) {
@@ -279,50 +243,29 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
+          BottomButton(
+            text: "CALCULATE",
             onTap: () {
+              CalculatorBrain calc =
+                  CalculatorBrain(height: height, weight: weight);
+
+              String BMI = calc.calculateBMI();
+              String result = calc.getResult();
+              String interpretation = calc.getInterpretation();
+
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ResultsPage()),
+                MaterialPageRoute(
+                    builder: (context) => ResultsPage(
+                          BMI: BMI,
+                          result: result,
+                          interpretation: interpretation,
+                        )),
               );
             },
-            child: Container(
-              child: Text(
-                "CALCULATE",
-                style: kHeavyLabelTextStyle,
-              ),
-              color: Color(kBottomContainerColor),
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-            ),
           ),
         ],
       ),
-    );
-  }
-}
-
-//CREATING A WIDGET FROM SCRATCH EXAMPLE
-
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({@required this.icon, @required this.onPressed});
-
-  final IconData icon;
-  final Function onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      child: Icon(this.icon),
-      onPressed: this.onPressed,
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
-      constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
-      ),
-      elevation: 0.0,
     );
   }
 }
