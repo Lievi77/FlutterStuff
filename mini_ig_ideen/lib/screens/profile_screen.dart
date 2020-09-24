@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_ig_ideen/utilities/constants.dart';
@@ -8,9 +9,19 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  String _name;
+  //Name and Photo urls storage
+  String name;
 
-  String _photoUrl;
+  String photoUrl;
+
+  //firebase firestore database instance
+  final FirebaseFirestore _db = FirebaseFirestore.instance;
+
+  //firebase firebaseauth instance
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  //LOADING DISPLAY
+  bool isLoaded = false;
 
   @override
   void initState() {
@@ -18,23 +29,59 @@ class _ProfileScreenState extends State<ProfileScreen> {
     getProfileData();
   }
 
-  dynamic getProfileData() async {}
+  dynamic getProfileData() async {
+    try {
+      //retrieve the user
+      User user = await _auth.currentUser;
+
+      //path goes to the Firestore tab in the Firebase console
+      DocumentSnapshot doc = await _db.collection("users").doc(user.uid).get();
+
+      setState(() {
+        // the keywords in the [] brackets are determined by how the data is stored in Firebase
+        name = doc.data()["displayName"];
+
+        photoUrl = doc.data()['photoUrl'];
+
+        print(photoUrl);
+
+        isLoaded = true;
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        //timestamp: 40:10
-        children: <Widget>[
-          RaisedButton(
-            onPressed: () {
-              //signout, easy!
-              FirebaseAuth.instance.signOut();
-            },
-            child: Text("Logout"),
-          ),
-        ],
-      ),
-    );
+    if (isLoaded) {
+      return Container(
+        child: Column(
+          //timestamp: 40:10
+          children: <Widget>[
+            Center(
+              child: Container(
+                child: Image(
+                  image: NetworkImage(photoUrl),
+                ),
+              ),
+            ),
+            RaisedButton(
+              onPressed: () {
+                //signout, easy!
+                FirebaseAuth.instance.signOut();
+              },
+              child: Text("Logout"),
+            ),
+          ],
+        ),
+      );
+    } else {
+      return Container(
+        child: Center(
+          child: Text("Loading"),
+        ),
+      );
+    }
   }
 }
