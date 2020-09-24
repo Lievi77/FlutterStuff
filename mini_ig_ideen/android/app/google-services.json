@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "632906094337",
+    "firebase_url": "https://mini-ig-3856d.firebaseio.com",
+    "project_id": "mini-ig-3856d",
+    "storage_bucket": "mini-ig-3856d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632906094337:android:9fc865255ec6b9e25ced00",
+        "android_client_info": {
+          "package_name": "com.ig_ideen.mx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632906094337-rbc1oh7iqojv0089004p53p2r090fugu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ig_ideen.mx",
+            "certificate_hash": "d9979abe9d780412ade9a6da708fc8a975598a42"
+          }
+        },
+        {
+          "client_id": "632906094337-sa8rajs2phn27068mig1mjuki837qiut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAEhvKL-K4uvzobc36B1YDqU5VV9wbtk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632906094337-sa8rajs2phn27068mig1mjuki837qiut.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632906094337-rrhjhrhfmen3jr7tup05upqauu95bsmi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mini-ig-ideen-mx"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

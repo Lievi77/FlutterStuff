@@ -11,7 +11,7 @@ class Main extends StatelessWidget {
       //HIDE DEBUG FLAG
       theme: ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: HomePage(),
     );
   }
 }

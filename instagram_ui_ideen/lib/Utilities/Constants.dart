@@ -20,17 +20,17 @@ const kCaptionStyle = TextStyle(
 
 const kUsernameStyle = TextStyle(
   color: Colors.black,
-  fontSize: 10.0,
+  fontSize: 15.0,
   fontWeight: FontWeight.bold,
 );
 
-const kStoriesContainerHeight = 110.0;
+const kStoriesContainerHeight = 90.0;
 
-const kStoriesContainerWidth = 110.0;
+const kStoriesContainerWidth = 90.0;
 
-const kStoryImageHeight = 60.0;
+const kStoryImageHeight = 50.0;
 
-const kStoryImageWidth = 60.0;
+const kStoryImageWidth = 50.0;
 
 final kImagesContainerDecoration = BoxDecoration(
   borderRadius: BorderRadius.circular(70.0),
@@ -38,4 +38,13 @@ final kImagesContainerDecoration = BoxDecoration(
     width: 3.0,
     color: Color(0xFF8e44ad),
   ),
+);
+
+const kLikedDisplayStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);
+
+const kDateCaptionStyle = TextStyle(
+  color: Colors.grey,
 );

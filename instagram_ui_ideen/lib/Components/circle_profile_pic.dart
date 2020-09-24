@@ -13,8 +13,8 @@ class CircleProfilePic extends StatelessWidget {
       borderRadius: BorderRadius.circular(50),
       child: Image(
         image: NetworkImage(imageUrl),
-        width: 50.0,
-        height: 50.0,
+        width: 40.0,
+        height: 40.0,
         fit: BoxFit.cover,
       ),
     );

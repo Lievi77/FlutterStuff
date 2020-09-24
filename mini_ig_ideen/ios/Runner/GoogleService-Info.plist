@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>632906094337-rrhjhrhfmen3jr7tup05upqauu95bsmi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.632906094337-rrhjhrhfmen3jr7tup05upqauu95bsmi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0-Qq7sHP9qZTgZXCNQkLhs8I5BQdTjkA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>632906094337</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mini-ig-ideen-mx</string>
+	<key>PROJECT_ID</key>
+	<string>mini-ig-3856d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mini-ig-3856d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:632906094337:ios:9967f5b7cc99e71e5ced00</string>
+	<key>DATABASE_URL</key>
+	<string>https://mini-ig-3856d.firebaseio.com</string>
+</dict>
+</plist>
