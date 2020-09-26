@@ -25,6 +25,7 @@ class LoginScreen extends StatelessWidget {
       //now that we have the credentials, we must store them
 
       //collection is like a folder
+      //create a folder for the user or a record per say
       FirebaseFirestore.instance.collection("users").doc(user.uid).set({
         "email": user.email,
         "displayName": user.displayName,

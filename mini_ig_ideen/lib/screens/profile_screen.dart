@@ -35,15 +35,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
       User user = await _auth.currentUser;
 
       //path goes to the Firestore tab in the Firebase console
+
       DocumentSnapshot doc = await _db.collection("users").doc(user.uid).get();
+
+
 
       setState(() {
         // the keywords in the [] brackets are determined by how the data is stored in Firebase
-        name = doc.data()["displayName"];
+        name = doc.data()['displayName'];
 
-        photoUrl = doc.data()['photoUrl'];
 
-        print(photoUrl);
+        photoUrl = doc.data()['photoURL'];
 
         isLoaded = true;
       });
@@ -61,11 +63,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: <Widget>[
             Center(
               child: Container(
-                child: Image(
-                  image: NetworkImage(photoUrl),
+                margin: EdgeInsets.only(top: 50.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(kProfilePicRadius),
+                  child: Image(
+                    image: NetworkImage(photoUrl),
+                    width: kProfilePicWidth,
+                    height: kProfilePicHeight,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
+
+            SizedBox(height: 20.0,),
+
+
+            Text(
+              name
+              ,style: kProfileNameDisplayStyle,
+            ),
+
             RaisedButton(
               onPressed: () {
                 //signout, easy!

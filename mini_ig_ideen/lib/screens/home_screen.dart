@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_ig_ideen/screens/feed_screen.dart';
 import 'package:mini_ig_ideen/screens/profile_screen.dart';
 import 'package:mini_ig_ideen/utilities/constants.dart';
+import 'package:mini_ig_ideen/Components/PostImageScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -28,7 +29,19 @@ class _HomeScreenState extends State<HomeScreen> {
             //tooltip enables the widget to display a text message when pressed and held
             tooltip: "Take a picture",
             icon: Icon(Icons.camera),
-            onPressed: () {},
+            onPressed: () {
+              //HERE WE DIRECT TO POSTIMAGESCREEN.DART
+
+              //we use navigation utility
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PostImageScreen(),
+                  fullscreenDialog: true,
+                ),
+              );
+            },
           )
         ],
       ),
