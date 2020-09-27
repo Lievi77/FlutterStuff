@@ -20,7 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mini IG"),
+        title: Text(
+          "Mini IG",
+          style: kAppBarTextStyle,
+        ),
+
+        backgroundColor: Colors.white,
+        brightness: Brightness.light,
+        actionsIconTheme: kAppBarIconTheme,
         centerTitle: false,
 
         //action widgets to be displayed on the bar
