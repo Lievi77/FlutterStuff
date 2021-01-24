@@ -1,4 +1,4 @@
-# mini_ig_ideen
+# mini_ig_backend
 
 A new Flutter application.
 
